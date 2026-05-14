@@ -122,10 +122,10 @@ jobs:
 
         env:
           # ---- Build selection ----
-          # Linux/Windows: Python 3.10, 3.11, 3.12
-          # macOS: Python 3.10, 3.11 only (skip 3.12)
-          CIBW_BUILD: "cp310-* cp311-* cp312-*"
-          CIBW_SKIP: "pp* *-musllinux_* cp312-macosx*"
+          # Linux/Windows: Python 3.10, 3.11, 3.12, 3.13, 3.14
+          # macOS: Python 3.10, 3.11 only (skip 3.12, 3.13, 3.14)
+          CIBW_BUILD: "cp310-* cp311-* cp312-* cp313-* cp314-*"
+          CIBW_SKIP: "pp* *-musllinux_* cp312-macosx* cp313-macosx* cp314-macosx*"
           CIBW_ARCHS: ${{ matrix.arch }}
 
           # ---- Dependencies ----
